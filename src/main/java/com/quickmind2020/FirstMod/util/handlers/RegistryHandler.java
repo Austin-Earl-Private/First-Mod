@@ -1,7 +1,9 @@
 package com.quickmind2020.FirstMod.util.handlers;
 
+import com.quickmind2020.FirstMod.init.ModBlocks;
 import com.quickmind2020.FirstMod.init.ModItems;
 import com.quickmind2020.FirstMod.util.IHasModel;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
@@ -24,6 +26,16 @@ public class RegistryHandler  {
                 ((IHasModel) item).registerModels();
             }
         }
+        for(Block block: ModBlocks.BLOCKS){
+            if(block instanceof IHasModel){
+                ((IHasModel) block).registerModels();
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onBlockRegister(RegistryEvent.Register<Block> event){
+        event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
     }
 
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "advanced_first_mod:ruby"
+    },
+    {
+      "item": "minecraft:apple"
+    }
+  ],
+
+  "result":
+  {
+    "item": "minecraft:golden_apple",
+    "data": 0,
+    "count": 1
+  }
+}

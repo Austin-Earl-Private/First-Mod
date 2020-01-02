@@ -1,5 +1,6 @@
 package com.quickmind2020.FirstMod;
 
+import com.quickmind2020.FirstMod.init.ModRecipes;
 import com.quickmind2020.FirstMod.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -24,7 +25,7 @@ public class Main {
 
     @Mod.EventHandler
     public static void init(FMLInitializationEvent event){
-
+        ModRecipes.init();
     }
 
     @Mod.EventHandler
